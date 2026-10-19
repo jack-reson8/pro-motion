@@ -1,12 +1,18 @@
-# mg-launch-video · a Claude Code skill for motion-graphics films
+# Pro Motion · audio-first motion-graphics films with Claude Code
 
-**Give Claude a music track and a product. Get a launch film or brand film that is designed, not templated — rendered in code, cut to the beat, in minutes.**
+**Give Claude a product (and a track, or let it plan one). Get a launch film, brand film or TVC that is designed, not templated — rendered in code, cut to the beat, in minutes.**
 
-<p align="center"><img src="docs/demo.gif" width="300" alt="8-second demo rendered by the starter template"></p>
+<table><tr>
+<td align="center"><img src="docs/showcase-launch.gif" width="260"><br><sub><b>Launch film</b> · product UI, effects that perform, 5 language cuts</sub></td>
+<td align="center"><img src="docs/showcase-brand.gif" width="260"><br><sub><b>Brand film</b> · stylized animation, objects as instruments</sub></td>
+<td align="center"><img src="docs/demo.gif" width="260"><br><sub><b>Starter template</b> · 8 s demo you get on install</sub></td>
+</tr></table>
+
+<sub>Films made with this skill for <b>Tutti</b>, a photo-play app. Full-length versions are attached to the <a href="https://github.com/jack-reson8/pro-motion/releases">latest release</a>.</sub>
 
 [中文说明](README.zh-CN.md)
 
-Most "AI video" today is either a template (3D phone + App Store badge) or a generated clip you can't direct. This skill takes a third path: **Claude writes the film as code** — a deterministic `render(t)` on a canvas — so every hit lands on the music to the 16th note, every transition is designed, and any shot can be changed by timestamp and re-rendered in seconds.
+Most "AI video" today is either a template (3D phone + App Store badge) or a generated clip you can't direct. Pro Motion takes a third path: **the music is planned as a marketing asset first, then Claude writes the film as code** — a deterministic `render(t)` on a canvas — so every hit lands on the music to the 16th note, every transition is designed, and any shot can be changed by timestamp and re-rendered in seconds.
 
 It is the method distilled from a real project that went through ~10 rounds of "this looks like a PowerPoint", "the material is ugly", "the text floats on top", "I said stylized, not pop art" — until the cuts were accepted. **The method made the difference, so the method is what this skill encodes.**
 
@@ -15,6 +21,7 @@ It is the method distilled from a real project that went through ~10 rounds of "
 | Step | What Claude does |
 |---|---|
 | 1 · Brief | Fixes product, audience, markets, music, ratios, film type — decides defaults instead of interrogating |
+| 1b · Audio first | Campaign brain (truth · tension · mechanic · channel), an audio plan with a sonic logo and hooks, one precise Suno/Udio prompt, then `audio_post.py` for exact-beat SFX, stutters, loops and loudness |
 | 2 · Music | `analyze_music.py` → tempo, beat grid, onsets, low/high hits, a spectrogram with the grid drawn on. The spectrogram is the edit |
 | 3 · Research | Finds official uploads, pulls 24-frame **contact sheets** with yt-dlp (no browser), writes a **technique sheet** per reference |
 | 4 · Direction | **Three clearly different style frames** from named techniques — you pick before anything is animated |
@@ -30,15 +37,15 @@ It is the method distilled from a real project that went through ~10 rounds of "
 **As a Claude Code plugin (recommended)**
 
 ```bash
-claude plugin marketplace add jack-reson8/mg-launch-video-skill
-claude plugin install mg-launch-video@mg-launch-video
+claude plugin marketplace add jack-reson8/pro-motion
+claude plugin install pro-motion@pro-motion
 ```
 
 **As a plain skill**
 
 ```bash
-git clone https://github.com/jack-reson8/mg-launch-video-skill
-cp -R mg-launch-video-skill/plugins/mg-launch-video/skills/mg-launch-video ~/.claude/skills/
+git clone https://github.com/jack-reson8/pro-motion
+cp -R pro-motion/plugins/pro-motion/skills/pro-motion ~/.claude/skills/
 ```
 
 Requirements: Node 18+, Python 3 with `numpy scipy matplotlib`, Chrome/Chromium (auto-detected, or `CHROME=/path`). Subject cutouts need macOS 14+. Everything else is installed per project by `scripts/setup.sh`.
@@ -58,11 +65,12 @@ Claude follows the skill: analyses the music, researches with contact sheets, sh
 ## What's inside
 
 ```
-plugins/mg-launch-video/skills/mg-launch-video/
+plugins/pro-motion/skills/pro-motion/
 ├── SKILL.md                    # the method (read by Claude)
 ├── scripts/
 │   ├── setup.sh                # one-command project setup
 │   ├── analyze_music.py        # tempo, grid, onsets, spectrogram
+│   ├── audio_post.py           # exact-beat SFX, stutter, loop, loudness
 │   ├── render-fast.js          # parallel render, stills mode, audio mux
 │   ├── contact_sheet.sh        # frames at given seconds → one image
 │   ├── ref_frames.sh           # reference video → 24-frame sheet (yt-dlp)
@@ -70,6 +78,8 @@ plugins/mg-launch-video/skills/mg-launch-video/
 │   └── faces.swift             # face boxes (macOS Vision)
 ├── assets/template/            # film.html · film.js (runnable demo) · motion-lib.js · OFL handwriting fonts
 └── references/
+    ├── audio-first.md          # campaign brain, audio plan, generator prompts
+    ├── campaign-cases.md       # launch mechanics that travelled
     ├── sourcing.md             # how to find and read references
     ├── research-notes.md       # worked technique sheets
     ├── aesthetic-checklist.md  # story · motion · type · material · languages · delivery

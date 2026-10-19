@@ -29,3 +29,10 @@
 - The brief said "strongly stylized", not "pop art"; I collapsed four rich references (Persona 5, Promare, Mind Game, P5 anime) into the most obvious one (Lichtenstein pop art) because it was the first association and the easiest to draw in code. The output was good but generic relative to the references.
 - Fix: technique sheets per reference + 3 divergent style frames for the user to choose before building (SKILL.md §2b). Name the techniques you are borrowing; if a direction can be summarised as one familiar label ("pop art", "flat", "Y2K"), it is probably not new enough.
 - Techniques that were seen but not used, and were the distinctive part: Promare's flat polygon light and neon fields with zero gradients; Mind Game's mid-shot switches between drawing styles and photo collage; P5 anime's repeated framing (same train window, changing passengers); P5's silhouette crowds and graphic city maps.
+
+## Music (audio-first, from a launch where the track was made from scratch)
+- Starting the picture before the track was locked wasted rounds; the user calls audio first "the most important". Plan the music as a campaign asset first (`references/audio-first.md`).
+- Prompts listing many electronic genre tags came back as generic EDM; prompts naming concrete acoustic instruments over a live-player foundation came back tasteful.
+- Generators ignore precise seconds and default to slow intros; state "starts at full energy, no intro" and "biggest peak at the end for the logo", then fix timing in post.
+- AI crowd vocals sound fake unless the recording situation is described; whispers and stuttered brand names were rejected; the brand name works best shouted by a group at a few key moments.
+- Random / generative concepts without a marketing mechanism were called "boring"; every concept needs a reason to be shared.

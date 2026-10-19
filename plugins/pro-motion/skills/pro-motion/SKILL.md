@@ -1,9 +1,9 @@
 ---
-name: mg-launch-video
-description: Make a high-taste motion-graphics (MG) launch film, brand film or promo video, rendered in code (canvas → MP4) and cut to a supplied music track. Use when the user asks for a launch video, product film, brand ad, app promo, motion graphics / AE-style animation, stylized animated film, 发布视频, 宣传片, 品牌片, 动效视频, 开场动画, or wants an existing video improved, re-cut to music, restyled or localized into several languages. Covers brief intake, music beat analysis, reference sourcing with frame contact sheets, technique sheets and style frames, protagonist-driven shot maps, a reusable motion library, subject cutouts, fast parallel rendering, frame-sheet verification and multi-language / multi-ratio delivery.
+name: pro-motion
+description: Pro Motion — make a high-taste motion-graphics (MG) launch film, brand film, TVC or promo video, audio first: plan the music as a marketing asset (sonic logo, viral hooks, Suno/Udio prompts, precise post-production), then render the film in code (canvas → MP4) cut to that track. Use when the user asks for a launch video, product film, brand ad, app promo, motion graphics / AE-style animation, stylized animated film, 发布视频, 宣传片, 品牌片, TVC, 广告配乐, BGM, 音频策划, Suno 提示词, sonic logo, 动效视频, 开场动画, or wants an existing video improved, re-cut to music, restyled or localized into several languages. Covers brief intake, audio-first music planning and generation prompts, viral / unconventional launch tactics, music beat analysis, reference contact sheets, style frames, protagonist-driven shot maps, a motion library, cutouts, fast parallel rendering, verification and multi-language / multi-ratio delivery.
 ---
 
-# MG film (launch · brand · promo)
+# Pro Motion — MG film, audio first (launch · brand · TVC · promo)
 
 A method for making motion-graphics films that read as designed, not templated — in code, fast, locked to music.
 It was distilled from a real project that went through ~10 rounds: early cuts were rejected as "PPT", "ugly material", "text floating on top", "pop art when I asked for stylized"; later cuts were accepted. **The difference was the method, not the tooling.** Follow the steps in order; each one exists because skipping it failed once.
@@ -11,14 +11,22 @@ It was distilled from a real project that went through ~10 rounds: early cuts we
 ## 0 · Setup (once per project folder)
 
 ```bash
-bash ~/.claude/skills/mg-launch-video/scripts/setup.sh .   # copies the template + tools, installs puppeteer & ffmpeg-static, checks python deps
+bash ~/.claude/skills/pro-motion/scripts/setup.sh .   # copies the template + tools, installs puppeteer & ffmpeg-static, checks python deps
 FF=tools/node_modules/ffmpeg-static/ffmpeg
 ```
 Needs Node 18+, Python 3 with numpy / scipy / matplotlib, and a Chrome / Chromium install (auto-detected; set `CHROME=/path` to override). Subject cutouts need macOS 14+.
 
 ## 1 · Brief intake (decide, don't interrogate)
 
-Write down in one block, filling gaps with sensible defaults and saying so: product / brand and what the film must make people feel · audience and markets (→ languages) · music file (required — the film is cut to it) · duration · aspect ratios (default 9:16 master, 1:1 and 16:9 later) · film type (product launch = show the product's real design language; brand film = story and style first, product optional) · must-have elements (logo, mascot, slogan, features) · what the user has rejected before.
+Write down in one block, filling gaps with sensible defaults and saying so: product / brand and what the film must make people feel · audience and markets (→ languages) · music file (if there is none, make one in step 1b — never start the picture without a locked track) · duration · aspect ratios (default 9:16 master, 1:1 and 16:9 later) · film type (product launch = show the product's real design language; brand film = story and style first, product optional) · must-have elements (logo, mascot, slogan, features) · what the user has rejected before.
+
+## 1b · Audio first: plan and generate the track
+
+Read `references/audio-first.md`. Before any picture work:
+1. **Campaign brain first** (§1–2 of the reference): truth · tension · mechanic · hijacked channel · audience as media · moment · afterlife, one line each — pick a mechanism type A–G from `references/campaign-cases.md` and design the sound that *is* the mechanism, then turn each answer into an audio decision. The track is a campaign asset, not background; for "viral / 神级" briefs, search recent Cannes / Spikes winners for fresh mechanics.
+2. Write the **audio plan**: BPM chosen so bars are round seconds, energy map table (time · section · sound · marketing job), silences before the big hits, logo hit + tail.
+3. Write **one generator prompt** (style = identity, tags = placement, concrete instruments, explicit energy arc, realistic voice spec). Offer 2–3 genuinely different directions only when the user is still exploring.
+4. User generates takes → analyse (step 2) → finish the precise parts with `tools/audio_post.py` (tuned SFX on exact beats, glow-up muffle, on-twos stutter, loop, Morse / spectrogram signature, loudness).
 
 ## 2 · Analyse the music (the edit is the music)
 
@@ -78,6 +86,6 @@ Take feedback as "time → problem", fix only that, re-render (seconds, not minu
 
 ## Files
 
-- `scripts/` — `setup.sh`, `analyze_music.py`, `render-fast.js`, `contact_sheet.sh`, `ref_frames.sh`, `cutout.swift`, `faces.swift`
+- `scripts/` — `setup.sh`, `analyze_music.py`, `audio_post.py`, `render-fast.js`, `contact_sheet.sh`, `ref_frames.sh`, `cutout.swift`, `faces.swift`
 - `assets/template/` — `film.html`, `film.js` (8-second runnable demo), `motion-lib.js`, OFL handwriting fonts
-- `references/` — `sourcing.md`, `research-notes.md`, `aesthetic-checklist.md`, `lessons.md`
+- `references/` — `audio-first.md`, `campaign-cases.md`, `sourcing.md`, `research-notes.md`, `aesthetic-checklist.md`, `lessons.md`

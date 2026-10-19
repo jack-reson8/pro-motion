@@ -1,12 +1,12 @@
 {
-  "name": "mg-launch-video",
-  "description": "Motion-graphics launch / brand films in code, cut to your music.",
+  "name": "pro-motion",
+  "description": "Pro Motion: audio-first motion-graphics launch, brand and TVC films, rendered in code and cut to the music.",
   "owner": { "name": "jack-reson8" },
   "plugins": [
     {
-      "name": "mg-launch-video",
-      "source": "./plugins/mg-launch-video",
-      "description": "Make high-taste motion-graphics launch and brand films in code (canvas → MP4), cut to a music track: beat analysis, reference contact sheets, style frames, protagonist shot maps, motion library, parallel rendering, multi-language cuts."
+      "name": "pro-motion",
+      "source": "./plugins/pro-motion",
+      "description": "Audio-first MG films in code (canvas → MP4): plan the music as a marketing asset (sonic logo, hooks, Suno/Udio prompts, post-production), then beat analysis, reference contact sheets, style frames, protagonist shot maps, motion library, parallel rendering, multi-language cuts."
     }
   ]
 }
