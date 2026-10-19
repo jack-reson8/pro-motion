@@ -1,0 +1,12 @@
+{
+  "name": "mg-launch-video",
+  "description": "Motion-graphics launch / brand films in code, cut to your music.",
+  "owner": { "name": "jack-reson8" },
+  "plugins": [
+    {
+      "name": "mg-launch-video",
+      "source": "./plugins/mg-launch-video",
+      "description": "Make high-taste motion-graphics launch and brand films in code (canvas → MP4), cut to a music track: beat analysis, reference contact sheets, style frames, protagonist shot maps, motion library, parallel rendering, multi-language cuts."
+    }
+  ]
+}

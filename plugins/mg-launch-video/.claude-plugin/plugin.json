@@ -1,0 +1,9 @@
+{
+  "name": "mg-launch-video",
+  "description": "Make high-taste motion-graphics launch and brand films in code (canvas → MP4), cut to a music track.",
+  "version": "1.0.0",
+  "author": { "name": "jack-reson8" },
+  "homepage": "https://github.com/jack-reson8/mg-launch-video-skill",
+  "license": "MIT",
+  "keywords": ["motion-graphics", "video", "launch-video", "animation", "canvas", "ffmpeg", "music-sync"]
+}
