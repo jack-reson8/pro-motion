@@ -22,11 +22,12 @@ Write down in one block, filling gaps with sensible defaults and saying so: prod
 
 ## 1b · Audio first: plan and generate the track
 
-Read `references/audio-first.md`. Before any picture work:
-1. **Campaign brain first** (§1–2 of the reference): truth · tension · mechanic · hijacked channel · audience as media · moment · afterlife, one line each — pick a mechanism type A–G from `references/campaign-cases.md` and design the sound that *is* the mechanism, then turn each answer into an audio decision. The track is a campaign asset, not background; for "viral / 神级" briefs, search recent Cannes / Spikes winners for fresh mechanics.
-2. Write the **audio plan**: BPM chosen so bars are round seconds, energy map table (time · section · sound · marketing job), silences before the big hits, logo hit + tail.
-3. Write **one generator prompt** (style = identity, tags = placement, concrete instruments, explicit energy arc, realistic voice spec). Offer 2–3 genuinely different directions only when the user is still exploring.
-4. User generates takes → analyse (step 2) → finish the precise parts with `tools/audio_post.py` (tuned SFX on exact beats, glow-up muffle, on-twos stutter, loop, Morse / spectrogram signature, loudness).
+Copy `assets/template/audio-plan.md` into the project (setup does this for new folders; copy it by hand into existing ones) and fill it in order — each part feeds the next, and the picture doesn't start until the track is locked:
+1. **Campaign brain** (§1): read `references/audio-first.md` §1 and pick a mechanism type A–G from `references/campaign-cases.md`; write the sound that *is* the mechanism. A concept with no mechanism gets rejected as "boring" — fix it here, not later. For "viral / 神级" briefs, search recent Cannes / Spikes winners first.
+2. **Palette and energy map** (§2–3): use the fusion engine, sound-design and voice lists in `audio-first.md` §3; bars on round seconds.
+3. **Rails** (§4): tick every box; any unticked box means rewrite the map, not the prompt.
+4. **Prompt** (§5): follow `audio-first.md` §4 (style = identity, tags = placement). Show the user the plan's §1 and §3 plus the prompt. Offer 2–3 directions only while they're still exploring.
+5. **Post** (§6): user generates takes → analyse (step 2) → `tools/audio_post.py` for tuned SFX on exact beats, glow-up muffle, on-twos stutter, loop, Morse / spectrogram signature; loudness with ffmpeg.
 
 ## 2 · Analyse the music (the edit is the music)
 
@@ -87,5 +88,5 @@ Take feedback as "time → problem", fix only that, re-render (seconds, not minu
 ## Files
 
 - `scripts/` — `setup.sh`, `analyze_music.py`, `audio_post.py`, `render-fast.js`, `contact_sheet.sh`, `ref_frames.sh`, `cutout.swift`, `faces.swift`
-- `assets/template/` — `film.html`, `film.js` (8-second runnable demo), `motion-lib.js`, OFL handwriting fonts
+- `assets/template/` — `audio-plan.md`, `film.html`, `film.js` (8-second runnable demo), `motion-lib.js`, OFL handwriting fonts
 - `references/` — `audio-first.md`, `campaign-cases.md`, `sourcing.md`, `research-notes.md`, `aesthetic-checklist.md`, `lessons.md`
