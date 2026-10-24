@@ -58,6 +58,15 @@ cp -R pro-motion/plugins/pro-motion/skills/pro-motion ~/.claude/skills/
 
 其余依赖由 `scripts/setup.sh` 按项目自动安装。
 
+**Codex**（CLI 或 ChatGPT 桌面版）：
+
+```bash
+codex plugin marketplace add jack-reson8/pro-motion
+codex plugin add pro-motion@pro-motion
+```
+
+也可以把 `plugins/pro-motion/skills/pro-motion` 复制到 `~/.codex/skills/`。Skill 遵循 [Agent Skills](https://agentskills.io) 开放标准，Claude Code、Codex 以及任何能读取 SKILL.md 的 agent 都能用。
+
 ## 怎么用
 
 直接说需求，并附上曲子：

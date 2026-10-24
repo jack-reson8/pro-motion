@@ -52,6 +52,15 @@ cp -R pro-motion/plugins/pro-motion/skills/pro-motion ~/.claude/skills/
 
 Requirements: Node 18+, Python 3 with `numpy scipy matplotlib`, Chrome/Chromium (auto-detected, or `CHROME=/path`). Subject cutouts need macOS 14+. Everything else is installed per project by `scripts/setup.sh`.
 
+**Codex** (CLI or the ChatGPT desktop app):
+
+```bash
+codex plugin marketplace add jack-reson8/pro-motion
+codex plugin add pro-motion@pro-motion
+```
+
+Or copy `plugins/pro-motion/skills/pro-motion` into `~/.codex/skills/`. The skill follows the open [Agent Skills](https://agentskills.io) standard, so it works in Claude Code, Codex and any agent that reads SKILL.md.
+
 ## Use it
 
 Just ask, with a track:

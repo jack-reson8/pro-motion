@@ -1,0 +1,20 @@
+{
+  "name": "pro-motion",
+  "interface": {
+    "displayName": "Pro Motion"
+  },
+  "plugins": [
+    {
+      "name": "pro-motion",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pro-motion"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}
