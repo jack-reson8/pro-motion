@@ -2,6 +2,8 @@
 
 English | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md) | [हिन्दी](README.hi.md)
 
+<p align="center"><img src="docs/share.png" alt="Pro Motion: music in, launch film out" width="100%"></p>
+
 **Give Claude a product (and a track, or let it plan one). Get a launch film, brand film or TVC that is designed, not templated — rendered in code, cut to the beat, in minutes.**
 
 <table><tr>

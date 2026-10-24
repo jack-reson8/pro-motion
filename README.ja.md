@@ -2,6 +2,8 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md) | 日本語 | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md) | [हिन्दी](README.hi.md)
 
+<p align="center"><img src="docs/share.png" alt="Pro Motion: music in, launch film out" width="100%"></p>
+
 **プロダクトを渡してください(曲も一緒に、あるいは曲の企画から任せることも可能)。テンプレートではなく「設計された」ローンチ映像・ブランド映像・TVC が、コードでレンダリングされ、ビートに合わせてカットされ、数分で手に入ります。**
 
 <table><tr>
