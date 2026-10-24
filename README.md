@@ -1,5 +1,7 @@
 # Pro Motion · audio-first motion-graphics films with Claude Code
 
+English | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md) | [हिन्दी](README.hi.md)
+
 **Give Claude a product (and a track, or let it plan one). Get a launch film, brand film or TVC that is designed, not templated — rendered in code, cut to the beat, in minutes.**
 
 <table><tr>
@@ -9,8 +11,6 @@
 </tr></table>
 
 <sub>Films made with this skill for <b>Tutti</b>, a photo-play app. Full-length versions are attached to the <a href="https://github.com/jack-reson8/pro-motion/releases">latest release</a>.</sub>
-
-[中文说明](README.zh-CN.md)
 
 Most "AI video" today is either a template (3D phone + App Store badge) or a generated clip you can't direct. Pro Motion takes a third path: **the music is planned as a marketing asset first, then Claude writes the film as code** — a deterministic `render(t)` on a canvas — so every hit lands on the music to the 16th note, every transition is designed, and any shot can be changed by timestamp and re-rendered in seconds.
 
@@ -26,7 +26,7 @@ It is the method distilled from a real project that went through ~10 rounds of "
 | 3 · Research | Finds official uploads, pulls 24-frame **contact sheets** with yt-dlp (no browser), writes a **technique sheet** per reference |
 | 4 · Direction | **Three clearly different style frames** from named techniques — you pick before anything is animated |
 | 5 · Story | One **protagonist** that transforms through every scene; every feature performs itself on a music event; every transition designed; text is animation; the ending grows into the logo |
-| 6 · Build | `motion-lib.js`: easing & springs, a beat camera driven by onsets, 12-fps doodle line boil, pen-written text, metaballs, halftone, sticker outlines, subject cutouts (macOS Vision), multi-language switch — plus 40+ deterministic canvas equivalents of AE / Blender / anime devices: curl-noise particles, particles that assemble into a logo, Saber glow, shine, whip pan, iris, ink bleed, shatter, zoom-through, paper tear, morph, manga panels, infinite zoom, RGB split, glitch, dither, ASCII, riso, cut paper, toon shading, hatching, watercolour, slit-scan, echo, speed ramp. `fx-demo.html` shows each for one second |
+| 6 · Build | `motion-lib.js`: easing & springs, squash & stretch, a beat camera driven by onsets, 12-fps doodle line boil, pen-written text, metaballs, halftone, stripes, 3D card ring, sticker outlines, subject cutouts (macOS Vision), multi-language switch — plus 40+ deterministic canvas equivalents of AE / Blender / anime devices: curl-noise particles, particles that assemble into a logo, Saber glow, shine, whip pan, iris, ink bleed, shatter, zoom-through, paper tear, morph, manga panels, infinite zoom, RGB split, glitch, dither, ASCII, riso, cut paper, toon shading, hatching, watercolour, slit-scan, echo, speed ramp. `fx-demo.html` shows each for one second |
 | 7 · Render | `render-fast.js`: parallel headless tabs → JPEG frames → one ffmpeg mux. ~30 s for 20 s @ 60 fps. Contact-sheet check, audio-length check |
 | 8 · Iterate | Feedback by timestamp; taste feedback goes back to research and direction, not to patching |
 
@@ -60,6 +60,12 @@ codex plugin add pro-motion@pro-motion
 ```
 
 Or copy `plugins/pro-motion/skills/pro-motion` into `~/.codex/skills/`. The skill follows the open [Agent Skills](https://agentskills.io) standard, so it works in Claude Code, Codex and any agent that reads SKILL.md.
+
+**Other agents** (Cursor, Gemini CLI, GitHub Copilot and other agents supported by the skills CLI):
+
+```bash
+npx skills add jack-reson8/pro-motion
+```
 
 ## Use it
 

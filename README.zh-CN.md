@@ -1,5 +1,7 @@
 # Pro Motion · 用 Claude Code 做"音频先行"的 MG 动画片
 
+[English](README.md) | 简体中文 | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md) | [हिन्दी](README.hi.md)
+
 **给 Claude 一个产品(带上曲子，或者让它先帮你策划曲子),它会交给你一支有设计感、不是模板的发布片、品牌片或 TVC。片子用代码渲染，每个动作都卡在拍子上，几分钟出片。**
 
 <table><tr>
@@ -31,6 +33,8 @@
 | 6 · 制作 | `motion-lib.js`:缓动和弹簧、挤压拉伸、每秒 12 帧的手绘线抖动、笔写文字、黏液融合、半调网点、条纹、3D 卡片环、贴纸描边、人像抠图(macOS Vision)、多语言切换;另有 40+ 个 AE / Blender / 动画 OP 手法的确定性 canvas 实现：节拍镜头、curl 噪声粒子、粒子聚成 logo、Saber 光剑、甩镜、光圈、墨水晕开、碎裂、穿洞、撕纸、形变、漫画分格、无限缩放、色散故障、抖动像素、ASCII、孔版套印、剪纸、卡通渲染、排线、水彩、狭缝扫描、残影、变速。`fx-demo.html` 每个效果演示 1 秒 |
 | 7 · 渲染 | `render-fast.js`:多个无头浏览器标签并行出帧，再一次合成音频。20 秒 60 帧约 30 秒出片;之后抽帧检查画面、检查音频长度 |
 | 8 · 迭代 | 反馈按时间点来;审美层面的反馈退回调研和定方向，不在原片上打补丁 |
+
+<p align="center"><img src="docs/spectrogram-example.png" width="720" alt="音乐分析:频谱图、能量包络和节拍网格"></p>
 
 ## 安装
 
@@ -67,6 +71,12 @@ codex plugin add pro-motion@pro-motion
 
 也可以把 `plugins/pro-motion/skills/pro-motion` 复制到 `~/.codex/skills/`。Skill 遵循 [Agent Skills](https://agentskills.io) 开放标准，Claude Code、Codex 以及任何能读取 SKILL.md 的 agent 都能用。
 
+**其他 agent**（Cursor、Gemini CLI、GitHub Copilot 等 skills CLI 支持的 agent）：
+
+```bash
+npx skills add jack-reson8/pro-motion
+```
+
 ## 怎么用
 
 直接说需求，并附上曲子：
@@ -76,6 +86,34 @@ codex plugin add pro-motion@pro-motion
 > 用这首歌给我的品牌做一支强烈风格化的品牌片，先给我三个风格方向的风格帧。
 
 > 8 到 10 秒那段像幻灯片，把那里的转场重新设计一下。
+
+Claude 会按 skill 的流程走：分析音乐，用联系表做调研，给你看风格帧，写 `shotmap.md`，搭 `film.js`，渲染 `out/*.mp4`，检查帧联系表，最后打开成片。
+
+## 目录结构
+
+```
+plugins/pro-motion/skills/pro-motion/
+├── SKILL.md                    # 方法本身（给 Claude 读）
+├── scripts/
+│   ├── setup.sh                # 一条命令初始化项目
+│   ├── analyze_music.py        # 速度、网格、重音、频谱图
+│   ├── audio_post.py           # 卡拍音效、结巴、循环、响度
+│   ├── render-fast.js          # 并行渲染、静帧模式、音频合成
+│   ├── contact_sheet.sh        # 指定秒数的帧 → 一张图
+│   ├── ref_frames.sh           # 参考视频 → 24 帧联系表（yt-dlp）
+│   ├── cutout.swift            # 人像抠图（macOS Vision）
+│   └── faces.swift             # 人脸框（macOS Vision）
+├── assets/template/            # campaign.md · audio-plan.md · film.html · film.js（可运行的演示）· motion-lib.js · fx-demo.html · OFL 字体
+└── references/
+    ├── unconventional-marketing.md  # 12 种非常规营销杠杆 → 步骤 → 案例 → 怎么用
+    ├── campaign-cases.md       # 传播过的发布玩法
+    ├── audio-first.md          # 传播机制、音频方案、生成器提示词
+    ├── vfx-techniques.md       # 转场、节奏、AE / Blender / 风格化手法：来源 · 参数 · 库调用
+    ├── sourcing.md             # 怎么找参考、怎么读参考
+    ├── research-notes.md       # 技法卡范例
+    ├── aesthetic-checklist.md  # 叙事 · 动效 · 字体 · 质感 · 多语言 · 交付
+    └── lessons.md              # 已经踩过的 bug 和审美坑
+```
 
 ## 核心原则
 
@@ -89,4 +127,6 @@ codex plugin add pro-motion@pro-motion
 
 ## 许可
 
-代码和文档采用 MIT 协议。内置字体(Patrick Hand、Yomogi、Gaegu、站酷快乐体)采用 SIL OFL 1.1 协议。用 `ref_frames.sh` 下载的参考视频仅供个人学习，请勿再分发。
+代码和文档采用 MIT 协议（见 `LICENSE`）。内置字体(Patrick Hand、Yomogi、Gaegu、站酷快乐体)采用 SIL OFL 1.1 协议，详见 `assets/template/assets/fonts/LICENSES.md`。用 `ref_frames.sh` 下载的参考视频仅供个人学习，请勿再分发。
+
+欢迎贡献，尤其是新的动效原语、转场、技法卡和踩坑记录。详见 `CONTRIBUTING.md`。
