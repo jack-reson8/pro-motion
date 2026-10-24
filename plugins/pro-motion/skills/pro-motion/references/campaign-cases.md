@@ -5,12 +5,13 @@ How to *use* these (levers L1–L12, the 5-point test, the `campaign.md` workshe
 These campaigns don't persuade. They create an experience or event people can't ignore, so users become the media. Each entry: what · mechanism · why it worked. ✓ = checked against a source this session; unmarked = well-known or from the user's notes; (u) = figures not verified.
 
 ## A · Physical mechanism: the product forces the action
-- **Coca-Cola "Friendly Twist"** (2014, Colombia) — gear-shaped caps open only when two people twist them together; 3,000 bottles in campus vending machines in the first week of term. You can't drink without making a friend.
+- **Coca-Cola "Friendly Twist"** (2014, Colombia; the user's "co-op bottle opening" favourite) — gear-shaped caps open only when two people twist them together; 3,000 bottles in campus vending machines in the first week of term. You can't drink without making a friend.
 - **Milka "Last Square"** (2013, FR/DE) — 10M bars missing one square; a code lets you send that square to someone. The defect becomes a gift ritual. (u: +33% sales, Cannes Gold)
 - **Milka "Let's Neighbor Up"** ✓ (Poland, Sept 2024, Ogilvy) — 100,000 parcels sent to the flat next door in new-build blocks; inside, two bars, one for the neighbour who brings it over. The "Neighborly" edition sold out: 5.5M buyers. Ran for three years (door hangers 2025, nameplates 2026).
 
 ## B · Spatial impossibility: a scene that only exists on site
 - **Skyworth wallpaper TV** ✓ (China, autumn 2026) — bus-shelter ads where the TV "slides out" of the frame: "Not the installer's fault — the TV is just too thin." Passers-by think the ad is broken; some brought a TV remote to pose.
+- **Lixin (立信) "paper TV" bus shelter** (Shenzhen, Sept 2026) — a red board says the TV is "too thin, like paper", with workers seemingly mid-installation. The brand comes from the user (seen first-hand); a Weibo video shows the board but doesn't name the brand. Same device as Skyworth: the medium itself proves the product is thin.
 - **Mizone protruding bottle** (2025) — half a 1.5 m bottle bursting out of bus-stop ads. Mixed reviews; the controversy itself spread.
 - **Nike × Zheng Qinwen** (Shanghai, 2025) — poster on one bank of the Huangpu, a giant ball on the other: she "hit it across the river". The space between two places is the content.
 - **Carlsberg "Probably the best poster"** (2015, London) — a billboard that pours free beer. The promise becomes a taste.
