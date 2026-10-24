@@ -1,9 +1,24 @@
 {
   "name": "pro-motion",
   "description": "Audio-first motion-graphics launch, brand and TVC films, rendered in code (canvas → MP4) and cut to the music.",
-  "version": "1.1.0",
-  "author": { "name": "jack-reson8" },
+  "version": "1.1.1",
+  "author": {
+    "name": "jack-reson8"
+  },
   "homepage": "https://github.com/jack-reson8/pro-motion",
   "license": "MIT",
-  "keywords": ["motion-graphics", "video", "launch-video", "brand-film", "animation", "music", "sonic-logo", "suno", "canvas", "ffmpeg"]
+  "keywords": [
+    "motion-graphics",
+    "video",
+    "launch-video",
+    "brand-film",
+    "animation",
+    "music",
+    "sonic-logo",
+    "suno",
+    "canvas",
+    "ffmpeg"
+  ],
+  "displayName": "Pro Motion",
+  "repository": "https://github.com/jack-reson8/pro-motion"
 }

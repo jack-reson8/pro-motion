@@ -36,6 +36,8 @@ It is the method distilled from a real project that went through ~10 rounds of "
 
 **As a Claude Code plugin (recommended)**
 
+In a session: `/plugin install pro-motion --marketplace jack-reson8/pro-motion` — or from the shell:
+
 ```bash
 claude plugin marketplace add jack-reson8/pro-motion
 claude plugin install pro-motion@pro-motion

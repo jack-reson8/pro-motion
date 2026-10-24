@@ -36,6 +36,8 @@
 
 **作为 Claude Code 插件(推荐)**
 
+会话里一行搞定:`/plugin install pro-motion --marketplace jack-reson8/pro-motion`;也可以在终端里:
+
 ```bash
 claude plugin marketplace add jack-reson8/pro-motion
 claude plugin install pro-motion@pro-motion
