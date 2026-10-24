@@ -6,7 +6,7 @@
     {
       "name": "pro-motion",
       "source": "./plugins/pro-motion",
-      "description": "Audio-first MG films in code (canvas → MP4): plan the music as a marketing asset (sonic logo, hooks, Suno/Udio prompts, post-production), then beat analysis, reference contact sheets, style frames, protagonist shot maps, motion library, parallel rendering, multi-language cuts."
+      "description": "Audio-first MG films in code (canvas → MP4): pick an unconventional campaign mechanism (12 stunt levers), plan the music as a marketing asset (sonic logo, hooks, Suno/Udio prompts, post-production), then beat analysis, reference contact sheets, style frames, protagonist shot maps, motion library with 40+ AE / Blender-style effects, parallel rendering, multi-language cuts."
     }
   ]
 }

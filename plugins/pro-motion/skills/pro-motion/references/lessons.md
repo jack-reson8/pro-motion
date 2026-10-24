@@ -36,3 +36,22 @@
 - Generators ignore precise seconds and default to slow intros; state "starts at full energy, no intro" and "biggest peak at the end for the logo", then fix timing in post.
 - AI crowd vocals sound fake unless the recording situation is described; whispers and stuttered brand names were rejected; the brand name works best shouted by a group at a few key moments.
 - Random / generative concepts without a marketing mechanism were called "boring"; every concept needs a reason to be shared.
+
+## "Style" means a visual style, not a concept (Tutti 果味 round, 2026-10-24)
+- Asked for "one Apple-ish + three stylized options", I delivered three narrative concepts (spec sheet, washing line, line field) and called them styles. Jack: a style is something you recognise at a glance — anime OP, hand-drawn animation, 3D modelled, Clash-Royale-like, pop, fast-cut MG. Concepts are content that can sit inside any style.
+- Fix: present options on two axes — **visual style** (rendering language, palette, frame rate, cut tempo) × **narrative play** (which product feature performs). Each option names its style family and a reference work in that style.
+- Code can't fake every style: posterizing a photo into "anime cel" looked like a cheap filter. Use the style's real device instead (e.g. Spy x Family OP4 mono-tint tonal silhouettes); for drawn characters, generate them.
+- Same-person-in-every-frame reads as repetitive; get a varied subject set early (generated models are fine for this).
+
+## Rhythm = follow the onset density, not a hand-picked list of hits (2026-10-24, Tutti 果味 / 日漫 OP)
+Rejected: "节奏太慢，配合音乐的节奏变化不够". The cut count was fine (30 hard cuts), but the picture held still exactly where the track was busiest (9 onsets after the drop, 14 in the bridge tail), and nothing reacted to kicks or hats.
+Fix that worked: export onsets / low_hits / high_hits from analysis.json into `beats.js`; build every scene's changes from `within(ON, a, b)` instead of hand-typed times; wrap every scene in a beat camera (zoom punch + tilt on lows, micro jitter on hats). Before the first render, print onsets per section next to the shot map and check that each section changes at least as often as its onsets do.
+
+## Stylized ≠ filter over the user's photos; a brand film needs a story (2026-10-24, Tutti 日漫)
+Rejected: an anime-OP cut that was mostly the user's demo photos turned into tonal silhouettes. "太依赖真人素材，没讲好叙事，也没讲好产品在干嘛". 
+What to do instead: draw the world in code — props, sets, a protagonist object (here an old polaroid dated 2023.08.14), with people only as small silhouettes inside it. Hang a story on the brand line (ONE MORE TAKE: a camera-roll apartment block asleep at night → slate TAKE 2 → hanger crane → transformation → recipe paper-plane relay across cities → whole building lights up = tutti). Write 6 story axes first; the user's example (desk-objects film) is at most one axis.
+
+## Surprise is the ad; effects need names (2026-10-24, from the Tutti films)
+- The user: the unexpected thing (a TV sliding out of a bus-stop frame, a mascot that dies, a reply that names you) *is* the essence of advertising. A beautiful film with no mechanism around it is not enough → `campaign.md` is now required before the audio plan.
+- Beat helpers (`within`, `pulse`, `beatCam`, `lastIdx`) now live in `motion-lib.js`; a project's `beats.js` should only hold the ON / LOW / HIGH arrays, or `const` redeclarations will break the page.
+- Effects are chosen by name from `vfx-techniques.md` with a source behind them, not invented per film; check a new effect in `fx-demo.html` stills before using it in a shot.

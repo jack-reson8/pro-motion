@@ -21,12 +21,12 @@ It is the method distilled from a real project that went through ~10 rounds of "
 | Step | What Claude does |
 |---|---|
 | 1 · Brief | Fixes product, audience, markets, music, ratios, film type — decides defaults instead of interrogating |
-| 1b · Audio first | Campaign brain (truth · tension · mechanic · channel), an audio plan with a sonic logo and hooks, one precise Suno/Udio prompt, then `audio_post.py` for exact-beat SFX, stutters, loops and loudness |
+| 1b · Campaign + audio | A `campaign.md` worksheet: six stunt ideas from 12 unconventional-marketing levers (the medium malfunctions, neighbour billboards, the restriction becomes the joke, absurd mascot, personal replies at scale, UGC army, FOOH…), scored and picked. Then the campaign brain (truth · tension · mechanic · channel), an audio plan with a sonic logo and hooks, one precise Suno/Udio prompt, then `audio_post.py` for exact-beat SFX, stutters, loops and loudness |
 | 2 · Music | `analyze_music.py` → tempo, beat grid, onsets, low/high hits, a spectrogram with the grid drawn on. The spectrogram is the edit |
 | 3 · Research | Finds official uploads, pulls 24-frame **contact sheets** with yt-dlp (no browser), writes a **technique sheet** per reference |
 | 4 · Direction | **Three clearly different style frames** from named techniques — you pick before anything is animated |
 | 5 · Story | One **protagonist** that transforms through every scene; every feature performs itself on a music event; every transition designed; text is animation; the ending grows into the logo |
-| 6 · Build | `motion-lib.js`: easing & springs, squash/stretch, 12-fps doodle line boil, pen-written text, metaballs, halftone, stripes, 3D card ring, sticker outlines, subject cutouts (macOS Vision), multi-language switch |
+| 6 · Build | `motion-lib.js`: easing & springs, a beat camera driven by onsets, 12-fps doodle line boil, pen-written text, metaballs, halftone, sticker outlines, subject cutouts (macOS Vision), multi-language switch — plus 40+ deterministic canvas equivalents of AE / Blender / anime devices: curl-noise particles, particles that assemble into a logo, Saber glow, shine, whip pan, iris, ink bleed, shatter, zoom-through, paper tear, morph, manga panels, infinite zoom, RGB split, glitch, dither, ASCII, riso, cut paper, toon shading, hatching, watercolour, slit-scan, echo, speed ramp. `fx-demo.html` shows each for one second |
 | 7 · Render | `render-fast.js`: parallel headless tabs → JPEG frames → one ffmpeg mux. ~30 s for 20 s @ 60 fps. Contact-sheet check, audio-length check |
 | 8 · Iterate | Feedback by timestamp; taste feedback goes back to research and direction, not to patching |
 
@@ -78,10 +78,12 @@ plugins/pro-motion/skills/pro-motion/
 │   ├── ref_frames.sh           # reference video → 24-frame sheet (yt-dlp)
 │   ├── cutout.swift            # subject mask (macOS Vision)
 │   └── faces.swift             # face boxes (macOS Vision)
-├── assets/template/            # film.html · film.js (runnable demo) · motion-lib.js · OFL handwriting fonts
+├── assets/template/            # campaign.md · audio-plan.md · film.html · film.js (runnable demo) · motion-lib.js · fx-demo.html · OFL fonts
 └── references/
-    ├── audio-first.md          # campaign brain, audio plan, generator prompts
+    ├── unconventional-marketing.md  # 12 stunt levers → steps → cases → how to apply
     ├── campaign-cases.md       # launch mechanics that travelled
+    ├── audio-first.md          # campaign brain, audio plan, generator prompts
+    ├── vfx-techniques.md       # transitions, rhythm, AE / Blender / stylised looks: source · params · lib call
     ├── sourcing.md             # how to find and read references
     ├── research-notes.md       # worked technique sheets
     ├── aesthetic-checklist.md  # story · motion · type · material · languages · delivery

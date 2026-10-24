@@ -1,5 +1,7 @@
 # Campaign case bank (mechanisms to borrow)
 
+How to *use* these (levers L1–L12, the 5-point test, the `campaign.md` worksheet): `unconventional-marketing.md`. This file is the case bank.
+
 These campaigns don't persuade. They create an experience or event people can't ignore, so users become the media. Each entry: what · mechanism · why it worked. ✓ = checked against a source this session; unmarked = well-known or from the user's notes; (u) = figures not verified.
 
 ## A · Physical mechanism: the product forces the action
@@ -50,3 +52,14 @@ These campaigns don't persuade. They create an experience or event people can't 
 4. **Embed in an existing moment or emotion** (first week of term, Tet, waiting for the bus, a cold snap, a celebrity meme).
 5. **Physical impossibility is the scarcest content.** It can't be seen online, so people have to go and film it.
 6. **Proof over claim; channel is the idea; plan the afterlife.**
+
+## Added 2026-10-24 (app launches + 2023–26 awards; full notes in tutti-applemg/docs/marketing-apps.md and marketing-awards.md; most figures self-reported)
+- **H · Scarcity you can see** — Robinhood waitlist position jumps for referrals; Clubhouse / Arc invite codes; Dispo "develops tomorrow"; Nothing Phone (1) pre-order pass. Warning: a one-off flood (Lensa, 妙鸭) collapses in 1–2 months without a loop.
+- **I · Own a personal surface** — Locket Widget (home-screen photo from friends; Vietnam was a key market); Zalo "Proud of Vietnam" avatar skins (2025).
+- **D · Template loops** — CapCut templates, Picsart #FreeToEdit, 抖音 AI 漫画脸: each output carries the recipe that made it.
+- **Tubi "Interface Interruption"** (Cannes Gold 2023) — a fake glitch/broken screen during the Super Bowl; the error itself is the ad.
+- **IKEA "Hidden Tags"** (2024–25) — old IKEA furniture spotted in old photos/films becomes proof of value; the archive is the content.
+- **McDonald's Japan "No Smiles"** (Cannes Social Gold 2024) — a deliberately contrarian stance tied to a song/format.
+- **Samsung "Flipvertising"** (Cannes GP 2023) — ads that make you flip the phone; clues hidden across ads.
+- **Bar B Q Plaza "Sad Kama-Chan"** (Thailand, 2025) — a serialized sad mascot; the audience collectively changes the story.
+- **Facebook Marketplace "Yes, Couch!"** (2024) — same-day trend hijack.

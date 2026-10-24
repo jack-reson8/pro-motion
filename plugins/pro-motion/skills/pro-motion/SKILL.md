@@ -1,6 +1,6 @@
 ---
 name: pro-motion
-description: "Pro Motion — make a high-taste motion-graphics (MG) launch film, brand film, TVC or promo video, audio first: plan the music as a marketing asset (sonic logo, viral hooks, Suno/Udio prompts, precise post-production), then render the film in code (canvas → MP4) cut to that track. Use when the user asks for a launch video, product film, brand ad, app promo, motion graphics / AE-style animation, stylized animated film, 发布视频, 宣传片, 品牌片, TVC, 广告配乐, BGM, 音频策划, Suno 提示词, sonic logo, 动效视频, 开场动画, or wants an existing video improved, re-cut to music, restyled or localized into several languages. Covers brief intake, audio-first music planning and generation prompts, viral / unconventional launch tactics, music beat analysis, reference contact sheets, style frames, protagonist-driven shot maps, a motion library, cutouts, fast parallel rendering, verification and multi-language / multi-ratio delivery."
+description: "Pro Motion — make a high-taste motion-graphics (MG) launch film, brand film, TVC or promo video and the unconventional campaign around it, audio first: pick a surprising campaign mechanism (media hijack, neighbour billboards, fake-broken ads, absurd mascot, meme replies, UGC creator army, FOOH), plan the music as a marketing asset (sonic logo, Suno/Udio prompts, post-production), then render the film in code (canvas → MP4) cut to the beat with a library of AE / Blender-style effects (particles, saber glow, whip pan, ink, shatter, glitch, dither, riso, paper, toon, infinite zoom, manga panels). Use when the user asks for a launch video, product film, brand ad, app promo, motion graphics, AE-style animation, stylized animated film, viral or guerrilla marketing, stunt ideas, 发布视频, 宣传片, 品牌片, TVC, 广告创意, 营销点子, 非常规营销, 事件营销, 媒介劫持, 户外创意, 病毒传播, UGC 矩阵, 吉祥物人设, 广告配乐, BGM, Suno 提示词, 动效视频, 转场, 特效, 开场动画, or wants a video re-cut to music, restyled or localized."
 ---
 
 # Pro Motion — MG film, audio first (launch · brand · TVC · promo)
@@ -23,7 +23,7 @@ Write down in one block, filling gaps with sensible defaults and saying so: prod
 ## 1b · Audio first: plan and generate the track
 
 Copy `assets/template/audio-plan.md` into the project (setup does this for new folders; copy it by hand into existing ones) and fill it in order — each part feeds the next, and the picture doesn't start until the track is locked:
-1. **Campaign brain** (§1): read `references/audio-first.md` §1 and pick a mechanism type A–G from `references/campaign-cases.md`; write the sound that *is* the mechanism. A concept with no mechanism gets rejected as "boring" — fix it here, not later. For "viral / 神级" briefs, search recent Cannes / Spikes winners first.
+1. **Campaign brain** (§1): first fill `campaign.md` (template in `assets/template/`) with `references/unconventional-marketing.md`: six ideas from ≥ 4 levers (media malfunction, neighbour hijack, restriction-as-material, absurd persona, personal replies, UGC army, FOOH…), each scored on filmable moment · product causes the surprise · one-line excuse · co-actor · afterlife loop; the user's own examples fill at most one row. Pick one; it decides what the film is *for*. Cases A–I are in `references/campaign-cases.md`; for "viral / 神级" briefs also search recent Cannes / Spikes winners. Then read `references/audio-first.md` §1 and write the sound that *is* the mechanism. A concept with no mechanism gets rejected as "boring" — fix it here, not later.
 2. **Palette and energy map** (§2–3): use the fusion engine, sound-design and voice lists in `audio-first.md` §3; bars on round seconds.
 3. **Rails** (§4): tick every box; any unticked box means rewrite the map, not the prompt.
 4. **Prompt** (§5): follow `audio-first.md` §4 (style = identity, tags = placement). Show the user the plan's §1 and §3 plus the prompt. Offer 2–3 directions only while they're still exploring.
@@ -49,7 +49,7 @@ For each reference write a **technique sheet** (palette rule · line · texture 
 ## 4 · Direction: three style frames before any film
 
 Don't default to the first association or the style that is easiest to code — if a direction can be named by one familiar label ("pop art", "flat", "Y2K", "clean SaaS") it is probably not new enough.
-1. Propose **3 clearly different directions**, each = 2–3 *named techniques* borrowed from the technique sheets + the material it needs.
+1. Propose **3 clearly different directions**, each = a style family + 2–3 *named techniques* from the technique sheets or `references/vfx-techniques.md` (AE / Blender / anime devices with sources, parameters and the `motion-lib.js` call) + the material it needs. Render `fx-demo.html` stills if the user needs to see the vocabulary first.
 2. Render **one style frame each** (`node tools/render-fast.js "film.html?dir=a" stills/ --stills 1.2` — a still at the key moment, or a 2-second loop) and show them side by side.
 3. The user picks or mixes. Only then write the shot map.
 
@@ -57,7 +57,9 @@ Don't default to the first association or the style that is easiest to code — 
 
 - **One protagonist** that transforms through every scene (an object, shape or mascot tied to the brand — e.g. a brand dot that becomes a punch tool, a REC light, a page indicator, and finally the dot of the logo). Narrative beats feature lists.
 - **Each feature / object performs itself** on a music event (a punch is a hit, dots breathe on hi-hats, an outline draws itself, a sticker peels). Material and motion are the same thing.
-- **Every scene change is designed**: match cut, morph, object flies into the next layout, shard / scan / push wipe, metaball convergence, colour-block slam. Plain cuts only as deliberate stutters.
+- **Every scene change is designed**: match cut, morph, object flies into the next layout, shard / scan / push wipe, metaball convergence, colour-block slam — pick from `references/vfx-techniques.md` §1 and write the function + parameters in a "technique" column. Plain cuts only as deliberate stutters.
+- **One structural surprise** (`vfx-techniques.md` §6: fake ending, UI takeover, "it's broken", fourth wall, chain reaction), ideally echoing the campaign mechanism.
+- **Changes follow the onsets**: build every scene's moves from `within(ON, a, b)` and wrap scenes in `beatCam(t, LOW, HIGH)` (both in `motion-lib.js`); print onsets per section beside the shot map — no section may change less often than its onsets.
 - **Text is animation**: written on by the protagonist, riding a path, echoing an effect, annotating what it names. No lower-third templates, chips or boxes. Few words.
 - **The ending grows out of the film**: everything converges into the protagonist, which becomes part of the logo.
 - Shot map table: time · music event · picture · transition in · words. Save it as `shotmap.md`.
@@ -66,7 +68,7 @@ Run `references/aesthetic-checklist.md` against the shot map before coding.
 
 ## 6 · Build
 
-- Start from `film.js` (scene table + `render(t)`), `motion-lib.js` (primitives — read its header index) and `film.html`.
+- Start from `film.js` (scene table + `render(t)`), `motion-lib.js` (primitives — read its header index: beat, layers, particles, light, transitions, glitch, time fx, generative, stylised) and `film.html`. Post-processing effects take a `layer(name, draw)`; transitions take `(drawA, drawB, p)`.
 - `render(t)` must be **pure and deterministic**: no `Math.random` at draw time (use `rand(seed)` / `hash`), no state between frames — frames are rendered by parallel tabs.
 - Material: real, current, licence-safe photos (the user's own > Lorem Picsum / Unsplash licence) or pure drawn graphics. Half-body > big faces. Blank space beats an ugly asset. Cutouts / face boxes: `swift tools/cutout.swift in.jpg mask.png`, `swift tools/faces.swift *.jpg > faces.json` (normalized — convert to pixels explicitly).
 - Frame-rate language is a style choice: 60 fps smooth for product films; 24 fps with objects on twos (`Math.floor(t*12)/12`) for hand-made animation; 12 fps line boil for doodle layers.
@@ -88,5 +90,5 @@ Take feedback as "time → problem", fix only that, re-render (seconds, not minu
 ## Files
 
 - `scripts/` — `setup.sh`, `analyze_music.py`, `audio_post.py`, `render-fast.js`, `contact_sheet.sh`, `ref_frames.sh`, `cutout.swift`, `faces.swift`
-- `assets/template/` — `audio-plan.md`, `film.html`, `film.js` (8-second runnable demo), `motion-lib.js`, OFL handwriting fonts
-- `references/` — `audio-first.md`, `campaign-cases.md`, `sourcing.md`, `research-notes.md`, `aesthetic-checklist.md`, `lessons.md`
+- `assets/template/` — `campaign.md`, `audio-plan.md`, `film.html`, `film.js` (8-second runnable demo), `motion-lib.js`, `fx-demo.html` + `fx-demo.js` (one second per effect), OFL handwriting fonts
+- `references/` — `unconventional-marketing.md`, `campaign-cases.md`, `audio-first.md`, `vfx-techniques.md`, `sourcing.md`, `research-notes.md`, `aesthetic-checklist.md`, `lessons.md`
