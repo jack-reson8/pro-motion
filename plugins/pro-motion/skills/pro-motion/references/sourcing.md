@@ -1,6 +1,7 @@
 # Finding references (what actually worked)
 
 ## Pipeline
+0. **Compress every image before you look at it (hard rule, saves most of the token cost).** Long edge ≤ 800 px (contact sheets ≤ 1000 px), JPEG quality ≈ 60: `sips -Z 800 -s format jpeg -s formatOptions 60 in.png --out out.jpg` (or PIL `resize` + `quality=60`). Style, elements, design details, intent and the creative idea all survive at that size — and a "high-res" reference is usually a screenshot of a low-res source anyway. Never read the same image twice; write what you learned into the technique sheet instead. Read full resolution only when the user asks for it or when you are checking pixel-level craft of your own render.
 1. **Find the official upload** with web search restricted to youtube.com:
    `youtube <title> official trailer OR opening OR "textless OP"` — textless OP/ED versions are best (no credits over the art).
 2. **Download low-res and tile 24 frames** (no browser needed, no permission prompts):
