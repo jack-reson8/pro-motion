@@ -4,6 +4,7 @@
 
 <p align="center"><img src="docs/share.png" alt="Pro Motion: music in, launch film out" width="100%"></p>
 <p align="center"><sub><a href="https://github.com/jack-reson8/copy-that"><b>Copy That</b></a> 시리즈 · 한 줄로 전체 설치</sub></p>
+<p align="center"><a href="https://jack-reson8.github.io/skill-skill/check/"><img src="https://img.shields.io/badge/skill%20health-100%2F100-brightgreen" alt="skill health 100/100"></a></p>
 
 **Claude에게 제품을 주세요(곡을 함께 주거나, 곡 기획부터 맡겨도 됩니다). 템플릿이 아니라 제대로 설계된 런칭 영상, 브랜드 영상, TVC를 코드로 렌더링해 비트에 맞춰 편집한 결과물을 몇 분 안에 받아볼 수 있습니다.**
 

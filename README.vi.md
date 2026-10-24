@@ -4,6 +4,7 @@
 
 <p align="center"><img src="docs/share.png" alt="Pro Motion: music in, launch film out" width="100%"></p>
 <p align="center"><sub>Thuộc bộ <a href="https://github.com/jack-reson8/copy-that"><b>Copy That</b></a> · cài cả bộ bằng một lệnh</sub></p>
+<p align="center"><a href="https://jack-reson8.github.io/skill-skill/check/"><img src="https://img.shields.io/badge/skill%20health-100%2F100-brightgreen" alt="skill health 100/100"></a></p>
 
 **Đưa cho Claude một sản phẩm (kèm một bản nhạc, hoặc để nó lên kế hoạch luôn phần nhạc). Bạn nhận lại phim ra mắt, phim thương hiệu hay TVC được thiết kế thật sự chứ không dùng template — render bằng code, cắt đúng nhịp, chỉ trong vài phút.**
 
