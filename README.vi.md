@@ -3,6 +3,7 @@
 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | Tiếng Việt | [हिन्दी](README.hi.md)
 
 <p align="center"><img src="docs/share.png" alt="Pro Motion: music in, launch film out" width="100%"></p>
+<p align="center"><sub>Thuộc bộ <a href="https://github.com/jack-reson8/copy-that"><b>Copy That</b></a> · cài cả bộ bằng một lệnh</sub></p>
 
 **Đưa cho Claude một sản phẩm (kèm một bản nhạc, hoặc để nó lên kế hoạch luôn phần nhạc). Bạn nhận lại phim ra mắt, phim thương hiệu hay TVC được thiết kế thật sự chứ không dùng template — render bằng code, cắt đúng nhịp, chỉ trong vài phút.**
 

@@ -3,6 +3,7 @@
 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md) | हिन्दी
 
 <p align="center"><img src="docs/share.png" alt="Pro Motion: music in, launch film out" width="100%"></p>
+<p align="center"><sub><a href="https://github.com/jack-reson8/copy-that"><b>Copy That</b></a> सीरीज़ का हिस्सा · एक लाइन में पूरा सेट इंस्टॉल करें</sub></p>
 
 **Claude को अपना प्रोडक्ट दीजिए (साथ में कोई ट्रैक, या संगीत की योजना भी उसी पर छोड़ दीजिए)। बदले में मिलती है एक लॉन्च फ़िल्म, ब्रांड फ़िल्म या TVC जो टेम्पलेट से नहीं, डिज़ाइन करके बनी है — कोड में रेंडर की हुई, बीट पर कटी हुई, कुछ ही मिनटों में।**
 

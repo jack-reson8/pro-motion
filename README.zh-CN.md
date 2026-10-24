@@ -3,6 +3,7 @@
 [English](README.md) | 简体中文 | [日本語](README.ja.md) | [한국어](README.ko.md) | [Tiếng Việt](README.vi.md) | [हिन्दी](README.hi.md)
 
 <p align="center"><img src="docs/share.png" alt="Pro Motion: music in, launch film out" width="100%"></p>
+<p align="center"><sub>属于 <a href="https://github.com/jack-reson8/copy-that"><b>Copy That</b></a> 系列 · 一行命令装全套</sub></p>
 
 **给 Claude 一个产品(带上曲子，或者让它先帮你策划曲子),它会交给你一支有设计感、不是模板的发布片、品牌片或 TVC。片子用代码渲染，每个动作都卡在拍子上，几分钟出片。**
 
