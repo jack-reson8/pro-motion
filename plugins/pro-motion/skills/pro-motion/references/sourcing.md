@@ -13,6 +13,7 @@
 ## Blocked / painful
 - The in-app browser asks the user to allow every new site and YouTube may be refused → prefer yt-dlp in the shell.
 - Vimeo now requires login for yt-dlp; look for a YouTube mirror.
+- YouTube can block yt-dlp with a bot check, and most brand Vimeo embeds are domain-locked (401). Don't spoof a referer; take the direct mp4 the brand serves on its own site or CDN (open the page source, look for `.mp4`) — in practice that is where most launch films come from.
 - Behance/YouTube pages block curl; their CDNs (mir-s3-cdn-cf.behance.net, i.ytimg.com) don't.
 
 ## A wider pool for "strongly stylized" (pick across countries and media)
