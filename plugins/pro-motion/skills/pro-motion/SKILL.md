@@ -57,7 +57,7 @@ For each reference write a **technique sheet** entry (`### name` in `refs/techni
 
 ## 4 · Direction: three style frames before any film
 
-**Gate:** `python3 <this skill's base directory>/scripts/refs_gate.py .` must print ✓ (≥ 6 contact sheets in `refs/`, ≥ 6 technique entries with palette, transition and signature move) before any style frame is drawn. Show each frame beside the reference it borrows from, with "where it falls short of the reference" in words, not a self-score.
+**Gate:** `python3 <this skill's base directory>/scripts/refs_gate.py .` must print ✓ (≥ 6 contact sheets in `refs/`, ≥ 6 technique entries with palette, transition and signature move) before any style frame is drawn. Each direction fuses **≥ 2 references** — copy only inside the technique sheet; the palette, the core idea and how real material is used must be your own (a direction that keeps one reference's palette and layout was rejected as "抄"). Show each frame beside its references with what was taken, how it was changed, and where it still falls short, in words, not a self-score.
 
 Don't default to the first association or the style that is easiest to code — if a direction can be named by one familiar label ("pop art", "flat", "Y2K", "clean SaaS") it is probably not new enough.
 1. Propose **3 clearly different directions**, each = a style family + 2–3 *named techniques* from the technique sheets or `references/vfx-techniques.md` (AE / Blender / anime devices with sources, parameters and the `motion-lib.js` call) + the material it needs. Render `fx-demo.html` stills if the user needs to see the vocabulary first.
