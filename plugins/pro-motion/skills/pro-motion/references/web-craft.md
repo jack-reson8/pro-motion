@@ -10,7 +10,7 @@ Read this whenever the deliverable is a web page: official site, landing page, h
 
 | # | Step | Artifact (default dir `docs/site/`) | Gate |
 |---|---|---|---|
-| 1 | Ask which reference the user likes; if none, collect 8–14 stylized sites (a Sonnet subagent, brief in W1) and let the user point at one | `refs-web-<date>.md` | — |
+| 1 | Look up the global style library first (`python3 ~/.claude/style-library/lookup.py T` and keywords for the product; if the library is absent, say so and continue). Then ask which reference the user likes; if none, collect 8–14 stylized sites (a Sonnet subagent, brief in W1) and let the user point at one | `refs-web-<date>.md` with a line "用了库条目：…" | — |
 | 2 | Decode the liked reference as **layers**, at phone and desktop size | `refs/<name>.json` + `-m.png` `-d.png` from `scripts/web_layers.js` | `web_gate.py` needs ≥1 dump |
 | 3 | Technique sheet: ≥3 entries (liked ref, one mechanism ref, one product-native source) | `technique-sheets.md`, **committed before any site code** | `web_gate.py` checks fields + git order |
 | 4 | Register + fusion rule + 2–3 style frames rendered in a scratch copy (`cp -R <this skill>/assets/web-hero <scratchpad>/frames`; setup.sh does not copy it; never inside `site/`), each beside the liked ref with ≥3 element-level "where it falls short" lines and a `Core gap:` line; show the user, then write `Picked:` **with the user's own words** | `style-frames.md` (`Register:`, frames, then `Picked:`), `style-frames/*-vs-ref.jpg` | core-gap gate (W4); no `Picked:` before the user answers |
