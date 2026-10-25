@@ -1,12 +1,15 @@
 ---
 name: pro-motion
-description: "Pro Motion: make a high-taste motion-graphics launch film, brand film, TVC or promo video and the unconventional campaign around it, audio first: pick a surprising campaign mechanism (media hijack, fake-broken ads, meme replies, UGC army, FOOH), plan the music as a marketing asset (sonic logo, Suno/Udio prompts, post-production), then render the film in code (canvas to MP4) cut to the beat with AE / Blender-style effects (particles, glow, whip pan, ink, shatter, glitch, riso, paper, infinite zoom). Use when the user asks for a launch video, product film, brand ad, app promo, motion graphics, stylized animation, viral or guerrilla marketing, a jingle or BGM, or a video re-cut to music or localized. Triggers: 发布视频, 宣传片, 品牌片, 广告创意, 营销点子, 非常规营销, 事件营销, 病毒传播, 吉祥物人设, 广告配乐, BGM, 开场动画, Suno 提示词, 动效视频, 转场, 特效; プロモーション動画, モーショングラフィックス; 홍보 영상, 모션그래픽; video quảng bá, motion graphics; प्रोमो वीडियो, मोशन ग्राफिक्स."
+description: "Pro Motion: make a high-taste motion-graphics launch film, brand film, TVC or promo video and the unconventional campaign around it, audio first: pick a surprising campaign mechanism (media hijack, fake-broken ads, meme replies, UGC army, FOOH), plan the music as a marketing asset, then render the film in code (canvas to MP4) cut to the beat with AE-style effects. Also builds stylized web pages the same way (official site, landing page, interactive hero: live WebGL type, cutout subjects, try-with-your-photo, waitlist). Use when the user asks for a launch video, product film, brand ad, app promo, motion graphics, stylized animation, viral or guerrilla marketing, a jingle or BGM, a video re-cut to music or localized, or a website / landing page / hero that should look designed. Triggers: 官网, 落地页, 网页首屏, 网站动效, 发布视频, 宣传片, 品牌片, 广告创意, 营销点子, 非常规营销, 事件营销, 病毒传播, 吉祥物人设, 广告配乐, BGM, 开场动画, Suno 提示词, 动效视频, 转场, 特效; プロモーション動画, モーショングラフィックス; 홍보 영상, 모션그래픽; video quảng bá, motion graphics; प्रोमो वीडियो, मोशन ग्राफिक्स."
 ---
 
 # Pro Motion — MG film, audio first (launch · brand · TVC · promo)
 
 A method for making motion-graphics films that read as designed, not templated — in code, fast, locked to music.
 It was distilled from a real project that went through ~10 rounds: early cuts were rejected as "PPT", "ugly material", "text floating on top", "pop art when I asked for stylized"; later cuts were accepted. **The difference was the method, not the tooling.** Follow the steps in order; each one exists because skipping it failed once.
+
+## Web pages: same method, different medium (read first if the deliverable is a website)
+A landing page or site hero is a film that waits for a finger. Do **not** start from a page layout. Read `references/web-craft.md` and follow its W0 order: liked reference → `scripts/web_layers.js` layer dump → technique sheet committed **before** site code → `Register:` + style frame beside the reference → build from `assets/web-hero/` → verify like a phone. `python3 scripts/web_gate.py <project>` must print ✓ before the first site commit and `--ship` before the user sees anything. Skipping this order produced "完全不是一个事情, web 感太重" (2026-10-24); following it produced "这回真的很好".
 
 ## 0 · Setup (once per project folder)
 
@@ -94,6 +97,7 @@ Take feedback as "time → problem", fix only that, re-render (seconds, not minu
 
 ## Files
 
-- `scripts/` — `setup.sh`, `analyze_music.py`, `audio_post.py`, `render-fast.js`, `contact_sheet.sh`, `ref_frames.sh`, `refs_gate.py`, `cutout.swift`, `faces.swift`
+- `scripts/` — `setup.sh`, `analyze_music.py`, `audio_post.py`, `render-fast.js`, `contact_sheet.sh`, `ref_frames.sh`, `refs_gate.py`, `cutout.swift`, `faces.swift`, `web_layers.js` (decode a reference site's layers), `web_gate.py` (web order gate)
 - `assets/template/` — `campaign.md`, `audio-plan.md`, `film.html`, `film.js` (8-second runnable demo), `motion-lib.js`, `fx-demo.html` + `fx-demo.js` (one second per effect), OFL handwriting fonts
-- `references/` — `unconventional-marketing.md`, `campaign-cases.md`, `audio-first.md`, `vfx-techniques.md`, `sourcing.md`, `research-notes.md`, `aesthetic-checklist.md`, `lessons.md`
+- `assets/web-hero/` — the accepted tutti.pics engine: `src/index.html` + `src/strings.json` template, `public/hero.js` (WebGL type wall, looks, flash, code/poster/404 pages), `try.js` (local segmentation), `join.js` + `functions/` + `schema.sql` (waitlist on Pages + D1), `tools/build.js` (i18n pages + font subsets), `tools/og.js` (share cards)
+- `references/` — `web-craft.md` (web order, recipe, pitfalls), `unconventional-marketing.md`, `campaign-cases.md`, `audio-first.md`, `vfx-techniques.md`, `sourcing.md`, `research-notes.md`, `aesthetic-checklist.md`, `lessons.md`
